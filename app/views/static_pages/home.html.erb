@@ -1,0 +1,28 @@
+<% if logged_in? %>
+  <div class="row">
+    <aside class="col-md-4">
+      <section class="user_info">
+        <%= render 'shared/user_info' %>
+      </section>
+      
+        <%= render 'shared/health_form' %>
+     
+    </aside>
+  </div>
+<% else %>
+
+  <div class="center jumbotron">
+    <h1>CHÀO MỪNG ĐẾN VỚI <strong>HEALTH</strong></h1>
+  
+    <h2>
+    Hãy tham gia với chúng tôi
+    <a href= "https://learning-rails-nnagato-1.c9users.io/">Health</a>, 
+    Chúng tôi sẽ cho các bạn biết tình trạng sức khỏe hiện tại của mình qua chỉ số BMI của bạn
+    <p></p><%= link_to "BMI là gì?", about_path , class: "btn btn-primary" %></p>
+    </h2>
+  
+    <%= link_to "Sign up now!", signup_path , class: "btn btn-lg btn-primary" %>
+  </div>
+  
+
+<% end %>            
